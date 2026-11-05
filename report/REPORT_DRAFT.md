@@ -26,8 +26,8 @@ This weekend project builds a **tiny deterministic sandbox** (scripted agents, s
 
 Related public ideas that motivate the framing (technique inspiration only; not re-implemented from prior codebases):
 
-- Split / compositional refusal evasion and multi-agent prompt infection style attacks — **cite:** Prompt Infection / related multi-agent jailbreak literature (add real bibliographic entry only after verifying the public paper; no DOI invented here).
-- Trusted-monitor / control-style oversight baselines — **cite:** Greenblatt et al. trusted monitoring / AI control work (add verified citation in the final PDF).
+- Split / compositional refusal evasion and multi-agent prompt infection style attacks — **cite:** Lee & Tiwari (2024), *Prompt Infection* (arXiv:2410.07283).
+- Trusted-monitor / control-style oversight baselines — **cite:** Greenblatt et al. (2024), *AI Control* (ICML 2024 / arXiv:2312.06942).
 
 RedLoop / Gray Swan IPI work is **technique inspiration only** and is not copied into this tree (see §7).
 
@@ -174,15 +174,15 @@ Only weekend work is judged by Apart. This draft and the live metrics table are 
 
 ---
 
-## 8. References (placeholders — verify before PDF)
+## 8. References (verified Nov 6, 2026 ~5:00 AM IST from arXiv / PMLR pages)
 
-Do **not** invent titles or DOIs. Replace placeholders with verified public entries only:
-
-1. **cite:** Prompt Infection / multi-agent compositional jailbreak literature (verify author, year, venue).
-2. **cite:** Greenblatt et al. — trusted monitoring / AI control (verify full citation).
+1. Donghyun Lee and Mo Tiwari. *Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems*. arXiv:2410.07283 [cs.MA], 9 Oct 2024. https://arxiv.org/abs/2410.07283
+2. Ryan Greenblatt, Buck Shlegeris, Kshitij Sachan, and Fabien Roger. *AI Control: Improving Safety Despite Intentional Subversion*. In *Proceedings of the 41st International Conference on Machine Learning*, PMLR 235:16295–16336, 2024. https://proceedings.mlr.press/v235/greenblatt24a.html · also arXiv:2312.06942 https://arxiv.org/abs/2312.06942
 3. Apart Research Swarm Alignment 2026 sprint page — https://apartresearch.com/sprints/swarm-alignment-2026
 
 *(Optional appendix: full decision-matrix dump from `scripts/report_table.py`; pytest green count at draft time: 53.)*
+
+Verification notes: (1) and (2) confirmed via live arXiv abs pages (and PMLR for Greenblatt). No DOIs invented. ACM/ESORICS workshop mirror of Prompt Infection lists an extra co-author; we cite the arXiv v1 author list (Lee & Tiwari) as verified on abs/2410.07283.
 
 ---
 
@@ -195,4 +195,4 @@ python3 scripts/report_table.py      # refreshes report/METRICS_TABLE.md
 python3 scripts/run_seed_variance.py # refreshes report/SEED_VARIANCE.md
 ```
 
-Draft updated: Nov 6, 2026 ~3:00 AM IST (Asia/Calcutta). Metrics: encoded_taint det=1.000 fpr=0.000 (n=7, includes split_hex). Seed variance (5 seeds): encoded_taint det/fpr stable at 1.000/0.000. Submission PDF: `report/SPLIT_HARM_REPORT.pdf`.
+Draft updated: Nov 6, 2026 ~5:00 AM IST (Asia/Calcutta). Metrics: encoded_taint det=1.000 fpr=0.000 (n=7, includes split_hex). Seed variance (5 seeds): encoded_taint det/fpr stable at 1.000/0.000. Citations verified (Lee & Tiwari 2024 arXiv:2410.07283; Greenblatt et al. 2024 ICML/arXiv:2312.06942). Submission PDF: `report/SPLIT_HARM_REPORT.pdf`.
